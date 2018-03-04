@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.title= "5 Sekund";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br/><br /><br />
+<div class="row">
+    <div class="col s1">
+        <img class="timer-img" src="images/timer.jpg" alt="timer"/>
+    </div>
+
+    <div class="col s6 offset-s2">
+        <div class="row">
+            <a asp-action="SetPlayer" asp-controller="Home" class="waves-effect waves-light btn-large blue darken-1">
+                GRAJ<i class="material-icons right">play_arrow</i>
+            </a>
+        </div>
+        <div class="row">
+            <a asp-action="Index" asp-controller="Home" class="waves-effect waves-light btn-large blue darken-1">
+                Dodaj nowe pytanie<i class="material-icons right">plus_one</i>
+            </a>
+        </div>
+    </div>
+</div>
