@@ -1,8 +1,27 @@
 ﻿body {
     background-color: #f1f1f1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .timer-img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#validation-summary {
+    color: red;
+    font-weight: bold;
+}
+
+#player-count-input {
+    background-color: white;
+    width: 45px;
+    font-size: 20px;
+    text-align: center
 }

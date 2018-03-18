@@ -1,0 +1,16 @@
+﻿@model int
+
+
+<div class="row ">
+    <form class="col s12 grey lighten-3" asp-controller="Home" asp-action="Game" method="post">
+        @for (int i = 1; i <= Model; i++) {
+        <div class="row ">
+            <div class="input-field col s12">
+                <input placeholder="Nazwa gracza" id="playersNames[@(i-1)]" name="playersNames[@(i-1)]" type="text" class="validate">
+                <label for="playersNames[@(i-1)]">Nazwa gracza @i</label>
+            </div>
+        </div>
+        }
+        <input class="btn blue darken-1" type="submit" value="Graj" asp-controller="Home" asp-action="Game" />
+    </form>
+</div>

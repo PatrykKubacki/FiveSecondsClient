@@ -1,0 +1,23 @@
+﻿<div id="modal3" class="modal">
+    <div class="modal-content">
+        <h4>KONIEC GRY</h4>
+        <p>
+            Gratulacje, wasza rozgrywka dobiegła końca! <br />
+            wygrał <b><span id="winner"></span></b>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a asp-action="Index" asp-controller="Home" 
+           class="modal-action modal-close waves-effect waves-green btn-flat">Koniec</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.modal').modal({
+             dismissible: false
+        });
+    });
+
+    document.getElementById('winner').innerHTML = players.find(x => x.id === currnetPlayerId).name;
+</script>

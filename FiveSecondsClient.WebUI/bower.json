@@ -2,6 +2,9 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "materialize": "0.100.2"
+    "materialize": "0.100.2",
+    "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.3",
+    "jquery-validation-unobtrusive": "v3.2.6",
+    "jquery-validation": "jquery-validate#1.17.0"
   }
 }

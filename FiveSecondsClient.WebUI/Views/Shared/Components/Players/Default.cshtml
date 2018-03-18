@@ -1,0 +1,22 @@
+﻿@model List<Player>
+
+<div class="row">
+    @{
+        var i = 1;
+        foreach (var player in Model)
+        {
+            <div class="card small col s1" style="width: 140px; height: 140px;">
+                <div class="card-image">
+                    <img alt="person image" width="50" height="100" src="~/images/person.png" />
+                </div>
+                <div class="card-content">
+                    <p></p>
+                </div>
+                <div class="card-action">
+                    <span><span id="player-@i">@player.Name</span> Punkty: <span id="score-@i">@player.Score</span></span>
+                </div>
+            </div>
+            i++;
+        }
+    }
+</div>

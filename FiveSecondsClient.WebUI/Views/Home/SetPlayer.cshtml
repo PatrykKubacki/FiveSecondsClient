@@ -1,27 +1,31 @@
-﻿
+﻿@model PlayerCountViewModel
+
 @{
     ViewData["Title"] = "Podaj graczy";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<br /><br/><br />
+<br /><br /><br />
 <div class="row">
-    <div class="col s12 m3">
-        <div class="card-panel indigo darken-1">
-            <span class="white-text"> <b>Podaj liczbę graczy</b></span>
+    <div class="col s4 grey lighten-3">
+        <br />
+        <div class="black-text"> <b>Podaj liczbę graczy</b></div>
+        <form asp-controller="Home" asp-action="SetPlayer" data-ajax="true" data-ajax-method="POST"
+              data-ajax-update="#Results" class="col s12">
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix" style="color: white">mode_edit</i>
-                            <input style="background-color: white; width: 45px; font-size: 20px; text-align: center" id="icon_prefix2" class="materialize-textarea" />
-                            <a class="btn btn-large">Dalej</a>
-                        </div>
-                    </div>
-                </form>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix" style="color: black">mode_edit</i>
+                    <input name="playerCount" asp-for="PlayerCount" value="4" 
+                           class="materialize-textarea validate" id="player-count-input" data-val="true" />
+                    <div id="validation-summary" asp-validation-summary="All"></div>
+                    <button type="submit" class="btn blue darken-1">Dalej</button> <br /><br/>
+                    <a class="btn red" asp-action="Index" asp-controller="Home">Wstecz</a>
+                </div>
             </div>
-        </div>
+        </form>
+    </div>
+    <div class="col s1">
+    </div>
+    <div class="col s4">
+        <div id="Results" name="Results"></div>
     </div>
 </div>
-
-

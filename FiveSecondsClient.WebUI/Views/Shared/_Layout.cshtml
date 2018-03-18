@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -7,15 +6,41 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="~/lib/materialize/dist/css/materialize.min.css" rel="stylesheet" />
     <link href="~/content/style.css" rel="stylesheet" />
-    </head>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/materialize/dist/js/materialize.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/Microsoft.jQuery.Unobtrusive.Ajax/jquery.unobtrusive-ajax.js"></script>
+</head>
 <body>
 <nav>
     <div class="nav-wrapper indigo darken-1">
         <a href="#" class="brand-logo center">5 Sekund</a>
     </div>
 </nav>
-<div class="container">
-    @RenderBody()
-</div>
+<main>
+    <br/> <br/> <br/>
+                <div class="row">
+                    <img class="timer-img" src="~/images/timer.jpg" alt="timer" />   
+          <div class="container">
+                          @RenderBody()
+           </div>
+    </div>
+</main>
+<footer class="page-footer indigo darken-1">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Copyright Patryk Kamil Kubacki
+        </div>
+    </div>
+</footer>
 </body>
 </html>
