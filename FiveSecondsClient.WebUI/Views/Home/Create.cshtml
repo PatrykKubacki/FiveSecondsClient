@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CreateQuestionViewModel
+@{
     ViewBag.title = "5 Sekund";
 }
 
@@ -10,11 +11,13 @@
                 <div class="black-text"> <b>Podaj nowe pytanie</b></div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
-                    <textarea placeholder="Pytanie" id="question" name="question" type="text" class="validate materialize-textarea"> </textarea>
+                    <textarea placeholder="Pytanie" id="Question" name="Question" type="text" asp-for="Question" class="validate materialize-textarea"> </textarea>
+                    <div id="validation-summary" asp-validation-summary="All"></div>
                 </div>
-                <input class="btn blue darken-1" type="submit" value="Dodaj"/> <br/> <br/>
-                <input class="btn red" type="submit" asp-controller="Home" asp-action="Index" value="Anuluj"/>
+                <input class="btn blue darken-1" type="submit" value="Dodaj" />
+                <a class="btn red" asp-controller="Home" asp-action="Index">Anuluj</a>
             </form>
-        </div>   
+
+        </div>
     </div>
 </div>
